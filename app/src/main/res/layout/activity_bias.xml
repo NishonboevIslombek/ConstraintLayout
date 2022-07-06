@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BiasActivity">
+
+    <!--
+    #Bias
+
+   / The default when encountering such opposite constraints
+   is to center the widget; but you can tweak the positioning to
+   favor one side over another using the bias attributes:
+
+ * layout_constraintHorizontal_bias
+ * layout_constraintVertical_bias
+      -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!--
+     # For example
+
+     Following TextView will make horizontally right 70% then default 50% bias so right side will
+     be shorter then left side.
+
+     Vertically
+
+     Additionally, it make also top 30% bias then top will be shorter then bottom
+     sides distance between TextView and Parent
+     -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
