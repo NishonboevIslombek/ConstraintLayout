@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RelativePosActivity">
 
 
     <TextView
@@ -47,8 +47,10 @@
         app:layout_constraintBaseline_toBottomOf="@id/img"
         app:layout_constraintStart_toStartOf="@id/img" />
 
-    <!--
-     Baseline of textview is the bottom of text of text view-->
+    <!-- Baseline of textview is the bottom of text of text view-->
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
