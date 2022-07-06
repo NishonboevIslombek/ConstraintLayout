@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarginsActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/text"
+        app:layout_constraintTop_toTopOf="@id/text"
+        app:layout_goneMarginStart="20dp" />
+
+    <!-- goneMargin
+         When the View's visibility GONE, we can specify margins to the views
+
+         Example :
+         goneMarginStart of btn is 20dp so when text visibility GONE this margin
+         works but text visibility VISIBLE we cannot see it
+
+         !! It is different from
+        android:layout_marginStart="10dp"
+        and
+        app:layout_goneMarginStart="20dp"
+     -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
