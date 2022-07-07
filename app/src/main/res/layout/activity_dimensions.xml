@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DimensionsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="60dp"
+        android:maxHeight="400dp"
+        android:text="TextViewTextViewTextViewTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--
+     You can define minimum and maximum sizes for the ConstraintLayout itself:
+
+    *android:minWidth set the minimum width for the layout
+    *android:minHeight set the minimum height for the layout
+    *android:maxWidth set the maximum width for the layout
+    *android:maxHeight set the maximum height for the layout
+
+   !!! Those minimum and maximum dimensions will be used by
+    ConstraintLayout when its dimensions are set to WRAP_CONTENT.-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
