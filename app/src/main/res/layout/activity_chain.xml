@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChainActivity">
+
+    <!-- 0 dp is equal to MATCH_CONSTRAINT -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+    #Chains
+
+     A set of widgets or we can say Views in Android is called "Chains"
+     if they are connected bi - directional or they both connected to each other
+     as example : id button, button1, button2; they are connected to each other
+     -->
+
+    <!--
+    #Chain Heads
+
+    Chains are controlled by attributes set
+    on the first element of the chain (the "head" of the chain):
+    for example : we can choose chain style for all three views with only
+    first view as example : id:button
+    -->
+
+    <!--
+    #Chain Style Types
+
+    *CHAIN_SPREAD - the elements will be spread out (default style)
+
+    *WEIGHTED chain - in CHAIN_SPREAD mode, if some widgets are set to MATCH_CONSTRAINT,
+     they will split the available space(they will fill and according to weights
+     they take place as linear layout, I know it is cool)
+
+    *CHAIN_SPREAD_INSIDE - similar, but the endpoints of the chain
+    will not be spread out
+    *CHAIN_PACKED - the elements of the chain will be packed together. T
+    he horizontal or vertical bias attribute of the child will then
+    affect the positioning of the packed elements
+    -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
