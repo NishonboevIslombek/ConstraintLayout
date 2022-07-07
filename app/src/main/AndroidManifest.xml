@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConstraintLayout">
         <activity
+            android:name=".ChainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DimensionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".CircularActivity"
             android:exported="false" />
         <activity
